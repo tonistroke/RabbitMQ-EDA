@@ -34,12 +34,12 @@ app.get('/colarOrden', async (req, res) => {
 
         res.status(200).json({ message: "Orden enviada!", data: dataOrden });
     } catch (error) {
-        console.error("Error sending data to queue:", error);
+        console.error("Error Al enviar datos a la cola:", error);
         res.status(500).json({ error: "Problema al enviar data a la cola." });
     }
 });
 
 
 app.listen(8080, () => {
-    console.log("Server is running on http://localhost:8080");
+    console.log("Servidor corriendo en http://localhost:8080");
 });
